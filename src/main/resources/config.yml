@@ -1,0 +1,8 @@
+#Type here any name of your custom item. Will not affect anything.
+custom_iron_sword:
+#Type of item. Aviable items here https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+  type: IRON_SWORD
+#An amount of item
+  amount: 1
+#Custom name
+  name: 'Резак'

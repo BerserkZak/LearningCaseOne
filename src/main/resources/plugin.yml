@@ -1,0 +1,11 @@
+name: LearningCaseOne
+version: '${project.version}'
+main: dev.berserkzak.learningcaseone.LearningCaseOne
+api-version: '1.20'
+commands:
+  sayHello:
+    description: Greeting with player
+    usage: /sayHello
+  giveItem:
+    description: Gives item writen in config
+    usage: /giveItem
