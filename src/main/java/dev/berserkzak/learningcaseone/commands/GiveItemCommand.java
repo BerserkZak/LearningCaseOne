@@ -15,19 +15,18 @@ public class GiveItemCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
 
-        Material materialType = Material.getMaterial(LearningCaseOne.getInstance().getConfig().getString("custom_iron_sword.type"));
-        int materialAmount = LearningCaseOne.getInstance().getConfig().getInt("custom_iron_sword.amount");
-        String materialName = LearningCaseOne.getInstance().getConfig().getString("custom_iron_sword.name");
-
-        ItemStack itemStack = new ItemStack(materialType, materialAmount);
-        ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.setDisplayName(materialName);
-        itemStack.setItemMeta(itemMeta);
-
         if (sender instanceof Player) {
-            ((Player) sender).getInventory()
-                             .addItem(itemStack);
 
+            Material materialType = Material.getMaterial(LearningCaseOne.getInstance().getConfig().getString("custom_iron_sword.type"));
+            int materialAmount = LearningCaseOne.getInstance().getConfig().getInt("custom_iron_sword.amount");
+            String materialName = LearningCaseOne.getInstance().getConfig().getString("custom_iron_sword.name");
+
+            ItemStack itemStack = new ItemStack(materialType, materialAmount);
+            ItemMeta itemMeta = itemStack.getItemMeta();
+            itemMeta.setDisplayName(materialName);
+            itemStack.setItemMeta(itemMeta);
+
+            ((Player) sender).getInventory().addItem(itemStack);
         }
         return false;
     }
